@@ -18,6 +18,7 @@ public class DoctorController {
         if (number == 13){
             return new Doctor (13, "Jodie Whittaker");
         }else{
+//            ternaire KDO ;)
             throw ((number > 0 && number < 13)? new ResponseStatusException(HttpStatus.SEE_OTHER, "Status 303") : new ResponseStatusException(HttpStatus.NOT_FOUND, "Impossible de récupérer l'incarnation "+number));
         }
     }
